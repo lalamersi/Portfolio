@@ -1,48 +1,63 @@
 <!DOCTYPE html>
-<html lang="en"></html>
-
-<head> 
+<html lang="eng">
     <meta charset="UTF-8">
-    <title>My Resume</title>
-</head>
+
+    <title>ALA's HTML portfolio</title>
+
+    <head>
+       <h1>Ana Laura Almillategui's HTML portfolio</h1> 
+    </head>
 
 <body>
-    <h1>Ana Laura Almillategui</h1>
+    <h2>I'm a web developer</h2>
     <hr/>
-    <img src="./Assets/ME.jpeg" height="200" alt="Ana Laura">
+    <h3><a href="./public/movie-ranking.html"> Movie Ranking Project</a></h3>
+    <img src="./assets/images/movie-ranking.png" alt=Movie ranking project preview height="200"/> 
+
+    <h3><a href="public/birthday-invite.html">Birthday Invite Project</h3>
+        <img src="./assets/images/birthday-invite.png" alt="Birthday invite project preview " height="200"/>
     <hr/>
+    <h4><a href='./public/contact.html'>Contact me</a> </h4>
+    <h4><a href='./public/about.html'>About me</a> </h4>
+<script>
 
-    <h2>Summary</h2>
-    <p>Panama based UI/UX designer doubling as a developer trainee </p>
+const workoutlist = []
+console.log(workoutlist.length);
 
-    <h2>Education</h2>
-<ol type="I">
-    <li>Colegio Las Esclavas del Sagrado Corazon de Jesus <br/>
-    2015</li>
-    <li>Technological University of Panama; Food Engigeering Degree<br/>
-    Ongoing</li>
-</ol>
+class Workout { 
+    name
+    exercises
+    constructor(name,exercises){
+        this.name = name
+        this.exercises= exercises
+    }
+}
 
-<h2>Work Experience</h2>
-<ol type="I">
-    <li>Sitel Panama; Getaroom.com <br/>
-    2016 (8mos)</li>
-    <li> Sitel Panama; Geek Squad <br/>
-    2019-2022</li>
-    <li>Circle logistics <br/>
-    2023-present</li>
-</ol>
+class Exercises { 
+    name
+    reps
+    weight
 
-<h2>Skills</h2>
+    constructor(name,reps,weight){
+        this.name = name
+        this.reps= reps
+        this.weight= weight
+    }
+}
 
-<ul>
-    <li>Figma</li>
-    <li>Adobe Creative Cloud</li>
-    <li>Zendesk</li>
-</ul>
+const exercises = []
+for (let i = 0; i < 10; i++) {
+    const ex = new Exercises(`exercise ${i + 1}`, `${i+1}`, '200lb')
+    exercises.push(ex)
+    
+}
 
-<h2>Other</h2>
-<a href="./hobbies.html">Hobbies</a>
-<a href="https://capable-nonogon-998369.framer.app/">UI/UX Portfolio</a>
+console.log(exercises);
+
+const wo = new Workout('workout 1', exercises)
+
+console.log(wo);
+
+
+</script>
 </body>
-</html> 
